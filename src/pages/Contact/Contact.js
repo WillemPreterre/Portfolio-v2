@@ -5,7 +5,7 @@ import "./Contact.scss";
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "", botcheck: "" });
   const [status, setStatus] = useState("");
-
+  console.log(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, process.env.REACT_APP_PUBLIC_KEY); 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
