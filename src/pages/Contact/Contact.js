@@ -1,15 +1,20 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
-
+import ReCAPTCHA from "react-google-recaptcha";
+import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "", botcheck: "" });
   const [status, setStatus] = useState("");
-  console.log(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, process.env.REACT_APP_PUBLIC_KEY); 
+  const [captcha, setCaptcha] = useState(null);
+
+  console.log(process.env.REACT_APP_RECAPTCHA_SITE_KEY, process.env.REACT_APP_TEMPLATE_ID, process.env.REACT_APP_PUBLIC_KEY);
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-
+  const handleCaptcha = (value) => {
+    setCaptcha(value);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -21,7 +26,10 @@ function Contact() {
       setStatus("Veuillez remplir tous les champs");
       return;
     }
-
+    if (!captcha) {
+      setStatus("Veuillez valider le reCAPTCHA");
+      return;
+    }
     emailjs
       .send(
         process.env.REACT_APP_SERVICE_ID,
@@ -33,6 +41,8 @@ function Contact() {
         () => {
           setStatus("Message envoyé avec succès !");
           setForm({ name: "", email: "", message: "", botcheck: "" });
+          setCaptcha(null);
+
         },
         () => {
           setStatus("Erreur, veuillez réessayer plus tard.");
@@ -41,41 +51,93 @@ function Contact() {
   };
 
   return (
-    <div className="page contact-page">
-      <h1>Contact</h1>
+    <>
+      <div className="contact-wrapper">
 
-      <form className="contact-form" onSubmit={handleSubmit}>
-        {/* Honeypot invisible */}
-        <input type="text" name="botcheck" value={form.botcheck} onChange={handleChange} style={{ display: "none" }} />
+        {/* LEFT */}
+        <div className="contact-left">
+          <h2>Coordonnées</h2>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Nom"
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          value={form.message}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Envoyer</button>
-      </form>
+          <div className="info-item">
+            <span>📧</span>
+            <a href="mailto:willem.preterre@gmail.com">willem.preterre@gmail.com</a>
+          </div>
 
-      {status && <p className="status">{status}</p>}
-    </div>
+          <div className="info-item">
+            <span>📍</span>
+            <p>33700 Mérignac, France</p>
+          </div>
+
+          <div className="social-icons">
+            <a
+              href="https://github.com/willempreterre"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="https://linkedin.com/in/tonprofil"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className="contact-right">
+          <h2>Formulaire de Contact</h2>
+
+          <form className="contact-form" onSubmit={handleSubmit}>
+
+            <input type="text" name="botcheck" value={form.botcheck} onChange={handleChange} style={{ display: "none" }} />
+
+            <div className="form-row">
+              <input
+                type="text"
+                name="name"
+                placeholder="Nom"
+                value={form.name}
+                onChange={handleChange}
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Adresse mail"
+                value={form.email}
+                onChange={handleChange}
+              />
+            </div>
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Sujet"
+            />
+
+            <textarea
+              name="message"
+              placeholder="Message"
+              value={form.message}
+              onChange={handleChange}
+            />
+
+            <ReCAPTCHA
+              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+              onChange={handleCaptcha}
+            />
+
+            <button type="submit">Envoyer →</button>
+
+          </form>
+        </div>
+
+      </div>
+    </>
   );
 }
 
