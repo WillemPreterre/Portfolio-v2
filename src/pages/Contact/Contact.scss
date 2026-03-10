@@ -1,36 +1,41 @@
 .contact-wrapper {
   display: flex;
-  min-height: 600px;
+  min-height: 400px;
+  flex-direction: column;
+
+  .contact-title {
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
-/* LEFT SIDE */
-
-.contact-left {
+.contact-bottom {
   flex: 1;
-  padding: 60px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
-  h2 {
-    letter-spacing: 4px;
-    margin-bottom: 40px;
-    color: #2563eb;
+  .coordonates {
+    display: flex;
+    flex-direction: column;
   }
 
   .info-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 16px;
   }
 
   .social-icons {
-    margin-top: 40px;
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
 
     a {
       width: 50px;
@@ -41,36 +46,32 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      color: black;
+      color: #D4CEBF;
       transition: 0.3s;
     }
 
     a:hover {
-      background: #2563eb;
+      background: #7ac0c0;
       color: white;
     }
   }
 }
 
-/* RIGHT SIDE */
-
-.contact-right {
+.contact-top {
   flex: 1;
-  background: #1d6fd6;
-  padding: 60px;
   color: white;
 
   h2 {
     margin-bottom: 30px;
+    color: #D4CEBF;
   }
 }
-
-/* FORM */
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 
   input,
   textarea {
@@ -78,6 +79,18 @@
     border: none;
     background: #e5e7eb;
     font-size: 15px;
+    width: 60%;
+    border-radius: 3px;
+    font-family: Open Sans, sans-serif;
+    color: #D4CEBF;
+  }
+
+  .submit-section {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    justify-content: space-evenly;
+    flex-direction: row;
   }
 
   textarea {
@@ -89,26 +102,21 @@
     width: 180px;
     padding: 14px;
     border-radius: 40px;
-    border: 2px solid white;
+    border: 2px solid #D4CEBF;
     background: transparent;
-    color: white;
+    color: #D4CEBF;
     cursor: pointer;
     transition: 0.3s;
   }
 
   button:hover {
-    background: white;
-    color: #1d6fd6;
+    background: #D4CEBF;
+    color: #7ac0c0;
   }
 }
 
-/* row name + email */
-
-.form-row {
-  display: flex;
-  gap: 20px;
-
-  input {
-    flex: 1;
-  }
+.email-link {
+  color: #D4CEBF;
+  text-decoration: none;
+  font-weight: bold;
 }

@@ -53,65 +53,28 @@ function Contact() {
   return (
     <>
       <div className="contact-wrapper">
-
-        {/* LEFT */}
-        <div className="contact-left">
-          <h2>Coordonnées</h2>
-
-          <div className="info-item">
-            <span>📧</span>
-            <a href="mailto:willem.preterre@gmail.com">willem.preterre@gmail.com</a>
-          </div>
-
-          <div className="info-item">
-            <span>📍</span>
-            <p>33700 Mérignac, France</p>
-          </div>
-
-          <div className="social-icons">
-            <a
-              href="https://github.com/willempreterre"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-
-            <a
-              href="https://linkedin.com/in/tonprofil"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-          </div>
-        </div>
-
-        {/* RIGHT */}
-        <div className="contact-right">
-          <h2>Formulaire de Contact</h2>
+        <div className="contact-top">
+          <h2 className="contact-title">Comment me contacter </h2>
 
           <form className="contact-form" onSubmit={handleSubmit}>
 
             <input type="text" name="botcheck" value={form.botcheck} onChange={handleChange} style={{ display: "none" }} />
 
-            <div className="form-row">
-              <input
-                type="text"
-                name="name"
-                placeholder="Nom"
-                value={form.name}
-                onChange={handleChange}
-              />
+            <input
+              type="text"
+              name="name"
+              placeholder="Nom"
+              value={form.name}
+              onChange={handleChange}
+            />
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Adresse mail"
-                value={form.email}
-                onChange={handleChange}
-              />
-            </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Adresse mail"
+              value={form.email}
+              onChange={handleChange}
+            />
 
             <input
               type="text"
@@ -125,17 +88,48 @@ function Contact() {
               value={form.message}
               onChange={handleChange}
             />
-
-            <ReCAPTCHA
-              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-              onChange={handleCaptcha}
-            />
-
-            <button type="submit">Envoyer →</button>
-
+            <div className="submit-section">
+              <ReCAPTCHA
+                sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                onChange={handleCaptcha}
+              />
+              <button type="submit">Envoyer →</button>
+            </div>
           </form>
         </div>
+        <div className="contact-bottom">
+          <h2>Coordonnées</h2>
+          <div className="coordonates">
+            <div className="info">
+              <div className="info-item">
+                <span>📧</span>
+                <a className="email-link" href="mailto:willem.preterre@gmail.com">willem.preterre@gmail.com</a>
+              </div>
 
+              <div className="info-item">
+                <span>📍</span>
+                <p>33700 Mérignac, France</p>
+              </div>
+            </div>
+            <div className="social-icons">
+              <a
+                href="https://github.com/willempreterre"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://linkedin.com/in/tonprofil"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

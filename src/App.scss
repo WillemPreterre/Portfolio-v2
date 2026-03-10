@@ -1,24 +1,23 @@
 // Variables
-$bg-color: #fff;
-$navbar-text-color: #fff;
-$text-color: #000;
+$bg-color: #4c5057;
+$navbar-text-color: #D4CEBF;
+$text-color: #D4CEBF;
 $card-bg: #f5f5f5;
-$link-color: #38bdf8;
-$navbar-bg: #020617;
+$link-color: #4c5057;
+$navbar-bg: #7ac0c0;
 $border-color: #1e293b;
-$font: Arial, Helvetica, sans-serif;
+$font: 'Open Sans', sans-serif;
 
 body {
   margin: 0;
-  font-family: $font;
   background: $bg-color;
   color: $text-color;
 }
 
 .container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px;
+  font-family: $font;
+  background: url(../public/grain.png) repeat;
+
 }
 
 // Navbar
@@ -28,7 +27,7 @@ body {
   padding: 20px 40px;
   background: $navbar-bg;
   border-bottom: 1px solid $border-color;
-
+  text-transform: uppercase;
   .logo {
     font-size: 20px;
   }
