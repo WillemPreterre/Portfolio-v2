@@ -13,13 +13,28 @@ body {
   background: $bg-color;
   color: $text-color;
 }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; // pousse le footer en bas
+}
 .container {
   font-family: $font;
   background: url(../public/grain.png) repeat;
 
 }
-
+html, body, #root {
+  height: 100%;
+}
 // Navbar
 .navbar {
   display: flex;

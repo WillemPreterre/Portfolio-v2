@@ -1,24 +1,30 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact/Contact.js";
-
 import "./App.scss";
+import Main from "./pages/Main/Main.js";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import Footer from "./components/Footer/Footer.js";
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <>
+      <GoogleReCaptchaProvider
+        reCaptchaKey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+      >
+        <Navbar />
+        <main>
+          <Main />
+        </main>
+
+        <Footer />
+      </GoogleReCaptchaProvider>
+
+
+
+
+
+      
+    </>
   );
 }
 

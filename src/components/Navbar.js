@@ -5,9 +5,9 @@ function Navbar() {
     <nav className="navbar">
       <h2 style={{ color: "#fff" }} className="logo">Mon Portfolio</h2>
       <div className="nav-links">
-        <Link to="/">Accueil</Link>
-        <Link to="/projects">Projets</Link>
-        <Link to="/contact">Contact</Link>
+        <a href="#home">Accueil</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   );
