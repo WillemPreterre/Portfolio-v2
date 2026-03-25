@@ -18,12 +18,6 @@ function App() {
 
         <Footer />
       </GoogleReCaptchaProvider>
-
-
-
-
-
-      
     </>
   );
 }
