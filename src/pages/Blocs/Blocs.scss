@@ -1,0 +1,349 @@
+/* ═══════════════════════════════════════════
+   CARTES — navigation vers les modales
+═══════════════════════════════════════════ */
+
+.cards-section {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.07);
+
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 640px) {
+    padding: 0 24px 40px;
+  }
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #111114;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 24px 20px;
+  max-width: 350px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color 0.2s,
+    transform 0.15s;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    transform: translateY(-3px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #7f77dd;
+    outline-offset: 2px;
+  }
+}
+
+.card-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 14px 14px 0 0;
+}
+
+.card-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.ctag {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #555;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+}
+
+.card-arrow {
+  font-size: 14px;
+  color: #333;
+  transition:
+    color 0.15s,
+    transform 0.15s;
+  flex-shrink: 0;
+
+  .card:hover & {
+    color: #888;
+    transform: translateX(3px);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   MODAL OVERLAY
+═══════════════════════════════════════════ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 14px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 20px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* ── Header modale ── */
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    margin: 0;
+  }
+}
+
+.modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.close-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(0, 0, 0, 0.18);
+  background: transparent;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+
+  &:hover {
+    background: #f3f3f3;
+  }
+}
+
+/* ── Pills filtre skills ── */
+
+.cat-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.pill {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 99px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+
+  &:hover,
+  &.active {
+    opacity: 1;
+  }
+}
+
+.pill-all {
+  background: #eeedfe;
+  color: #3c3489;
+  border-color: #afa9ec;
+}
+.pill-fw {
+  background: #e6f1fb;
+  color: #0c447c;
+  border-color: #85b7eb;
+}
+.pill-db {
+  background: #e1f5ee;
+  color: #085041;
+  border-color: #5dcaa5;
+}
+.pill-ops {
+  background: #faeeda;
+  color: #633806;
+  border-color: #ef9f27;
+}
+.pill-lang {
+  background: #f1efe8;
+  color: #444441;
+  border-color: #b4b2a9;
+}
+
+/* ── Grille skills ── */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 8px;
+}
+
+.skill-card {
+  background: #f9f9f9;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: border-color 0.15s;
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.18);
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+    margin: 0;
+  }
+  span {
+    font-size: 11px;
+    color: #888;
+  }
+}
+
+.modal-hint {
+  font-size: 11px;
+  color: #aaa;
+  text-align: center;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ── Icônes technos ── */
+
+.icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.html {
+  color: #e14e1d;
+}
+.css {
+  color: #1572b6;
+}
+.js {
+  color: #f7df1e;
+}
+.php {
+  color: #777bb3;
+}
+.react {
+  color: #08d8ff;
+}
+.angular {
+  color: #d6002f;
+}
+.nest {
+  color: #e0234e;
+}
+.next {
+  color: #000;
+}
+.node {
+  color: #44883e;
+}
+.sass {
+  color: #cb6e9b;
+}
+.postgres {
+  color: #336791;
+}
+.mongo {
+  color: #4db33d;
+}
+.docker {
+  color: #2496ed;
+}
+.git {
+  color: #f05032;
+}
+.gitlab {
+  color: #fc6d26;
+}
+.figma {
+  color: #f24e1e;
+}

@@ -1,86 +1,174 @@
+/* ═══════════════════════════════════════════
+   PROJECTS — page grille
+═══════════════════════════════════════════ */
+
 .projects {
   min-height: 100vh;
-  padding: 40px;
-  background: radial-gradient(circle at top left, #1a2a4f, #0b1623);
-  color: white;
+  display: flex;
+  align-items: center;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.07);
+  background: #0d0d0f;
+
+  @media (max-width: 640px) { padding: 40px 24px; }
 }
 
-.title {
-  font-size: 40px;
-  margin-bottom: 40px;
-  background: linear-gradient(90deg, #ff4ecd, #6cf);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+/* ── Grille ── */
 
-/* GRID */
 .projects-grid {
+  max-width: 900px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 14px;
+
+  @media (max-width: 900px)  { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px)  { grid-template-columns: 1fr; }
 }
 
-/* CARD */
+/* ── Carte ── */
+
 .card {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 20px;
+  background: #111114;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
   overflow: hidden;
-  transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px rgba(255, 78, 205, 0.3);
-}
-
-/* IMAGE */
-.card-image img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-/* CONTENT */
-.card-content {
-  padding: 20px;
-  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  transition: border-color 0.2s, transform 0.15s;
 
-  p {
-    font-size: 18px;
-    margin-bottom: 5px;
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    transform: translateY(-4px);
   }
+
+  &:focus-visible {
+    outline: 2px solid #7F77DD;
+    outline-offset: 2px;
+  }
+}
+
+.card-accent-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+
+/* Image */
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+
+    .card:hover & { transform: scale(1.03); }
+  }
+}
+
+.card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   span {
-    font-size: 14px;
-    opacity: 0.7;
-  }
-
-  a {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    color: white;
-    font-size: 18px;
-    transition: 0.3s;
-  }
-
-  a:hover {
-    color: #ff4ecd;
+    font-size: 48px;
+    font-weight: 500;
+    opacity: 0.25;
   }
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Contenu */
+
+.card-content {
+  padding: 14px 16px 10px;
+  flex: 1;
 }
 
-@media (max-width: 600px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-status {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 99px;
+}
+
+.status-done    { background: rgba(29,158,117,0.15);  color: #1D9E75; }
+.status-wip     { background: rgba(186,117,23,0.15);  color: #BA7517; }
+.status-concept { background: rgba(127,119,221,0.15); color: #7F77DD; }
+
+.card-year {
+  font-size: 11px;
+  color: #444;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: #555;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.ctag {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #555;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Footer */
+
+.card-footer {
+  padding: 10px 16px 14px;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-cta {
+  font-size: 12px;
+  color: #444;
+  transition: color 0.15s;
+
+  .card:hover & { color: #888; }
+}
+
+.card-ext-link {
+  font-size: 13px;
+  color: #444;
+  transition: color 0.15s;
+
+  &:hover { color: #ff4ecd; }
 }

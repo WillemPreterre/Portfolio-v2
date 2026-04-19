@@ -1,50 +1,90 @@
-import "./Projects.scss";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import "./Projects.scss";
+import { PROJECTS } from "../../data/projects.data";
+
+const STATUS_LABEL = {
+  "livré":    { label: "Livré",    cls: "status-done"    },
+  "en cours": { label: "En cours", cls: "status-wip"     },
+  "concept":  { label: "Concept",  cls: "status-concept" },
+};
 
 function Projects() {
-  const projects = [
-    {
-      title: "Website Coding",
-      description: "HTML, CSS, JS",
-      image: "/images/project1.jpg",
-      link: "#"
-    },
-    {
-      title: "Website Coding",
-      description: "HTML, CSS, JS",
-      image: "/images/project2.jpg",
-      link: "#"
-    },
-    {
-      title: "Website Coding",
-      description: "HTML, CSS, JS",
-      image: "/images/project3.jpg",
-      link: "#"
-    },
-  ];
+  const navigate   = useNavigate();
+  const [active, setActive] = useState("Tous");
+
+  const visible =
+    active === "Tous"
+      ? PROJECTS
+      : PROJECTS.filter((p) => p.tags.includes(active));
 
   return (
     <section className="projects" id="projects">
-      <h1 className="title">PORTFOLIO</h1>
-
+      {/* Grille */}
       <div className="projects-grid">
-        {projects.map((p, i) => (
-          <div className="card" key={i}>
-            <div className="card-image">
-              <img src={p.image} alt={p.title} />
-            </div>
+        {visible.map((p) => {
+          const statusMeta = STATUS_LABEL[p.status] ?? STATUS_LABEL["livré"];
+          return (
+            <div
+              key={p.slug}
+              className="card"
+              onClick={() => navigate(`/projects/${p.slug}`)}
+              role="button"
+              tabIndex={0}
+              aria-label={`Voir le projet ${p.title}`}
+              onKeyDown={(e) => e.key === "Enter" && navigate(`/projects/${p.slug}`)}
+            >
+              {/* Barre accent */}
+              <div className="card-accent-bar" style={{ background: p.accent }} />
 
-            <div className="card-content">
-              <p>{p.title}</p>
-              <span>({p.description})</span>
+              {/* Image */}
+              <div className="card-image">
+                {p.image ? (
+                  <img src={p.image} alt={p.title} />
+                ) : (
+                  <div
+                    className="card-placeholder"
+                    style={{ background: `${p.accent}18` }}
+                  >
+                    <span style={{ color: p.accent }}>{p.title.charAt(0)}</span>
+                  </div>
+                )}
+              </div>
 
-              <a href={p.link} target="_blank" rel="noreferrer">
-                <FaExternalLinkAlt />
-              </a>
+              {/* Contenu */}
+              <div className="card-content">
+                <div className="card-top">
+                  <span className={`card-status ${statusMeta.cls}`}>
+                    {statusMeta.label}
+                  </span>
+                  <span className="card-year">{p.year}</span>
+                </div>
+
+                <p className="card-title">{p.title}</p>
+                <span className="card-desc">{p.description}</span>
+              </div>
+
+              <div className="card-footer">
+                <span className="card-cta">Voir le projet →</span>
+                {p.links?.live && (
+                  <a
+                    href={p.links.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="card-ext-link"
+                    aria-label="Lien externe"
+                  >
+                    <FaExternalLinkAlt />
+                  </a>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
+
     </section>
   );
 }
