@@ -40,8 +40,8 @@ function Projects() {
 
               {/* Image */}
               <div className="card-image">
-                {p.image ? (
-                  <img src={p.image} alt={p.title} />
+                {p.logo ? (
+                  <img src={p.logo} alt={p.title} />
                 ) : (
                   <div
                     className="card-placeholder"
