@@ -1,103 +1,6 @@
 import React, { useState } from "react";
 import "./Parcours.scss";
-
-const FILTERS = [
-  { key: "all",   label: "Tout voir",  cls: "ftag-all"   },
-  { key: "form",  label: "Formation",  cls: "ftag-form"  },
-  { key: "exp",   label: "Expérience", cls: "ftag-exp"   },
-  { key: "stage", label: "Stage",      cls: "ftag-stage" },
-];
-
-const ENTRIES = [
-  {
-    cat:     "exp",
-    type:    "CDD · 3 mois",
-    title:   "Développeur de plateforme digitale",
-    org:     "MATARIKI — Paris",
-    date:    "2025",
-    desc:    "Travail sur une plateforme digitale en React et Python. Contribution aux projets internes et au développement des activités dans les domaines Data & IA.",
-    tags:    ["React", "Python", "Data & IA"],
-    current: true,
-  },
-  {
-    cat:   "exp",
-    type:  "Alternance · 2 ans",
-    title: "Développeur full stack",
-    org:   "V6Protect — cybersécurité",
-    date:  "2023 – 2025",
-    desc:  "Développement sur une application multicouches sur le thème de la cybersécurité. Première année en alternance à Webtech Institute, deuxième année à l'EPSI (Mastère Expert en Systèmes d'Information 2024–2025).",
-    tags:  ["React", "Node.js", "NestJS", "Cybersécurité"],
-  },
-  {
-    cat:   "exp",
-    type:  "Alternance",
-    title: "Développeur full stack",
-    org:   "Métarom — Amiens",
-    date:  "1 an",
-    desc:  "Première grande expérience professionnelle dans une entreprise d'arômes. Développement d'une application de formation interne avec vidéo, montage et interfaces métier. Rencontres avec les différents services pour analyser les besoins.",
-    tags:  ["React", "Laravel", "Figma", "Conduite de projet"],
-  },
-  {
-    cat:   "form",
-    type:  "Formation",
-    title: "Expert en Systèmes d'Information",
-    org:   "EPSI",
-    date:  "2024 – 2025",
-    desc:  "2ème année de Mastère en parcours expert informatique. Formation orientée architecture et systèmes d'information complexes.",
-    tags:  ["Architecture SI", "Mastère 2"],
-  },
-  {
-    cat:   "form",
-    type:  "Formation",
-    title: "Mastère Full Stack Development",
-    org:   "Webtech Institute",
-    date:  "2023 – 2024",
-    desc:  "Formation orientée full stack avec une dimension cybersécurité, pour renforcer la maîtrise du code côté serveur et sécuriser les applications.",
-    tags:  ["Full Stack", "Cybersécurité", "Mastère"],
-  },
-  {
-    cat:   "form",
-    type:  "Formation",
-    title: "Bachelor Web & Application Developer",
-    org:   "La Manu — Le Havre",
-    date:  "2020 – 2023",
-    desc:  "3 ans de formation en développement web et applicatif, incluant deux stages et une alternance de 1 an en entreprise. Diplôme obtenu en 3ème année diplômante.",
-    tags:  ["React", "PHP", "JavaScript", "Git", "Bachelor"],
-  },
-  {
-    cat:   "stage",
-    type:  "Stage",
-    title: "Développeur d'application",
-    org:   "La Fabrique à Biscuits — Le Havre",
-    date:  "3 mois",
-    desc:  "Conception d'une application web de gestion des ressources internes avec Symfony pour le compte d'une entreprise agro-alimentaire.",
-    tags:  ["Symfony", "PHP", "Gestion interne"],
-  },
-  {
-    cat:   "stage",
-    type:  "Stage",
-    title: "Développeur web",
-    org:   "Trust Yourself — Le Havre",
-    date:  "2 mois",
-    desc:  "Création d'un site web dans le cadre d'une formation en anglais. Premier contact avec le développement web professionnel.",
-    tags:  ["Wordpress", "Divi"],
-  },
-  {
-    cat:   "form",
-    type:  "Formation",
-    title: "Bac pro SN option RISC",
-    org:   "Lycée — Yvetot",
-    date:  "2017 – 2020",
-    desc:  "Spécialité réseaux informatiques et systèmes communicants — première immersion dans le monde de l'informatique et des systèmes.",
-    tags:  ["Réseaux", "Systèmes"],
-  },
-];
-
-const DOT_COLORS = {
-  form:  "#1D9E75",
-  exp:   "#378ADD",
-  stage: "#BA7517",
-};
+import { DOT_COLORS, ENTRIES, FILTERS } from "../../../data/parcours.data";
 
 function Parcours() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -127,7 +30,10 @@ function Parcours() {
             key={entry.title + entry.org}
             className={`entry ${entry.current ? "entry--current" : ""}`}
           >
-            <div className="dot" style={{ background: DOT_COLORS[entry.cat] }} />
+            <div
+              className="dot"
+              style={{ background: DOT_COLORS[entry.cat] }}
+            />
             <div className="parcours-card">
               <div className="card-top">
                 <div className="card-left">
@@ -142,7 +48,9 @@ function Parcours() {
               <p className="card-desc">{entry.desc}</p>
               <div className="parcours-tags">
                 {entry.tags.map((tag) => (
-                  <span key={tag} className="parcours-tag">{tag}</span>
+                  <span key={tag} className="parcours-tag">
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>

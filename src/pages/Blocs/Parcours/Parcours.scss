@@ -1,172 +1,192 @@
 /* ─────────────────────────────────────────
    PARCOURS — timeline
-   Couleurs explicites partout pour résister
-   au dark mode global de l'app
 ───────────────────────────────────────── */
 
 .parcours {
   padding: 8px 0;
-}
 
-/* ── Filtres ── */
+  /* ── Filtres ── */
 
-.filter-row {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
+  .filter-row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
 
-.ftag {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 4px 10px;
-  border-radius: 99px;
-  border: 1px solid transparent;
-  background: transparent;
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.15s;
+  .ftag {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 99px;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.15s;
 
-  &:hover,
-  &.on { opacity: 1; }
-}
+    &:hover,
+    &.on {
+      opacity: 1;
+    }
+  }
 
-.ftag-all   { background: #EEEDFE !important; color: #3C3489 !important; border-color: #AFA9EC !important; }
-.ftag-form  { background: #E1F5EE !important; color: #085041 !important; border-color: #5DCAA5 !important; }
-.ftag-exp   { background: #E6F1FB !important; color: #0C447C !important; border-color: #85B7EB !important; }
-.ftag-stage { background: #FAEEDA !important; color: #633806 !important; border-color: #EF9F27 !important; }
+  .ftag-all {
+    background: #eeedfe !important;
+    color: #3c3489 !important;
+    border-color: #afa9ec !important;
+  }
+  .ftag-form {
+    background: #e1f5ee !important;
+    color: #085041 !important;
+    border-color: #5dcaa5 !important;
+  }
+  .ftag-exp {
+    background: #e6f1fb !important;
+    color: #0c447c !important;
+    border-color: #85b7eb !important;
+  }
+  .ftag-stage {
+    background: #faeeda !important;
+    color: #633806 !important;
+    border-color: #ef9f27 !important;
+  }
 
-/* ── Timeline ── */
+  /* ── Timeline ── */
 
-.timeline {
-  position: relative;
-  padding-left: 28px;
+  .timeline {
+    position: relative;
+    padding-left: 28px;
 
-  &::before {
-    content: '';
+    &::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 1.5px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .entry {
+    position: relative;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .dot {
     position: absolute;
-    left: 7px;
-    top: 6px;
-    bottom: 6px;
-    width: 1.5px;
-    background: rgba(0, 0, 0, 0.12);
+    left: -28px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2.5px solid #ffffff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   }
-}
 
-.entry {
-  position: relative;
-  margin-bottom: 20px;
+  /* ── Card ── */
 
-  &:last-child { margin-bottom: 0; }
-}
+  .parcours-card {
+    background: #ffffff !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 14px 16px;
+    transition: border-color 0.15s;
 
-.dot {
-  position: absolute;
-  left: -28px;
-  top: 5px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 2.5px solid #ffffff;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-}
-
-/* ── Card ──
-   Renommée "parcours-card" pour ne pas entrer
-   en conflit avec la classe globale ".card"
-   qui hérite du dark mode de l'app
-───────────────────────────────────────── */
-
-.parcours-card {
-  background: #ffffff !important;
-  border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
-  border-radius: 12px !important;
-  padding: 14px 16px;
-  transition: border-color 0.15s;
-
-  &:hover {
-    border-color: rgba(0, 0, 0, 0.22) !important;
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.22) !important;
+    }
   }
-}
 
-.entry--current .parcours-card {
-  border: 1.5px solid #85B7EB !important;
-}
+  .entry--current .parcours-card {
+    border: 1.5px solid #85b7eb !important;
+  }
 
-.card-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 4px;
-}
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
 
-.card-left {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
+  .card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
 
-.type-badge {
-  display: inline-flex;
-  align-items: center;
-  font-size: 10px;
-  font-weight: 500;
-  padding: 2px 7px;
-  border-radius: 99px;
-  width: fit-content;
-  margin-bottom: 2px;
-}
+  .type-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 7px;
+    border-radius: 99px;
+    width: fit-content;
+    margin-bottom: 2px;
+  }
 
-.badge-form  { background: #E1F5EE !important; color: #085041 !important; }
-.badge-exp   { background: #E6F1FB !important; color: #0C447C !important; }
-.badge-stage { background: #FAEEDA !important; color: #633806 !important; }
+  .badge-form {
+    background: #e1f5ee !important;
+    color: #085041 !important;
+  }
+  .badge-exp {
+    background: #e6f1fb !important;
+    color: #0c447c !important;
+  }
+  .badge-stage {
+    background: #faeeda !important;
+    color: #633806 !important;
+  }
 
-.card-title {
-  font-size: 14px;
-  font-weight: 500;
-}
+  .card-title {
+    font-size: 14px;
+    font-weight: 500;
+  }
 
-.card-org {
-  font-size: 12px;
-  color: #888888 !important;
-}
+  .card-org {
+    font-size: 12px;
+    color: #888888 !important;
+  }
 
-.card-date {
-  font-size: 11px;
-  color: #aaaaaa !important;
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding-top: 3px;
-}
+  .card-date {
+    font-size: 11px;
+    color: #aaaaaa !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-top: 3px;
+  }
 
-.card-desc {
-  font-size: 12px;
-  color: #555555 !important;
-  line-height: 1.6;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 0.5px solid rgba(0, 0, 0, 0.08);
-}
+  .card-desc {
+    font-size: 12px;
+    color: #555555 !important;
+    line-height: 1.6;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.08);
+  }
 
-/* ── Tags ──
-   Renommés "parcours-tags / parcours-tag"
-   pour la même raison que parcours-card
-───────────────────────────────────────── */
+  /* ── Tags ── */
 
-.parcours-tags {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
+  .parcours-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
 
-.parcours-tag {
-  font-size: 10px;
-  padding: 2px 7px;
-  border-radius: 4px;
-  background: #f5f5f5 !important;
-  color: #666666 !important;
-  border: 0.5px solid rgba(0, 0, 0, 0.08) !important;
+  .parcours-tag {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: #f5f5f5 !important;
+    color: #666666 !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.08) !important;
+  }
 }
