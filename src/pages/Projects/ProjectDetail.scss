@@ -17,7 +17,9 @@
   padding: 20px 48px;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.07);
 
-  @media (max-width: 640px) { padding: 16px 24px; }
+  @media (max-width: 640px) {
+    padding: 16px 24px;
+  }
 }
 
 .back-btn {
@@ -29,7 +31,9 @@
   padding: 0;
   white-space: nowrap;
   transition: color 0.15s;
-  &:hover { color: #aaa; }
+  &:hover {
+    color: #aaa;
+  }
 }
 
 .detail-breadcrumb {
@@ -40,7 +44,9 @@
   color: #444;
 }
 
-.bc-sep { color: #333; }
+.bc-sep {
+  color: #333;
+}
 
 .bc-current {
   color: #777;
@@ -91,9 +97,18 @@
   border-radius: 99px;
 }
 
-.status-done    { background: rgba(29,158,117,0.15);  color: #1D9E75; }
-.status-wip     { background: rgba(186,117,23,0.15);  color: #BA7517; }
-.status-concept { background: rgba(127,119,221,0.15); color: #7F77DD; }
+.status-done {
+  background: rgba(29, 158, 117, 0.15);
+  color: #1d9e75;
+}
+.status-wip {
+  background: rgba(186, 117, 23, 0.15);
+  color: #ba7517;
+}
+.status-concept {
+  background: rgba(127, 119, 221, 0.15);
+  color: #7f77dd;
+}
 
 .detail-year {
   font-size: 11px;
@@ -257,7 +272,9 @@
   max-width: 48%;
   transition: border-color 0.15s;
 
-  &:hover { border-color: rgba(255, 255, 255, 0.15); }
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
 
   &--right {
     text-align: right;
@@ -265,8 +282,15 @@
   }
 }
 
-.nav-dir  { font-size: 10px; color: #444; }
-.nav-name { font-size: 12px; color: #888; line-height: 1.4; }
+.nav-dir {
+  font-size: 10px;
+  color: #444;
+}
+.nav-name {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.4;
+}
 
 /* ════ SIDEBAR ════ */
 
@@ -309,8 +333,14 @@
   font-size: 12px;
 }
 
-.sidebar-row-label { color: #444; flex-shrink: 0; }
-.sidebar-row-value { color: #888; text-align: right; }
+.sidebar-row-label {
+  color: #444;
+  flex-shrink: 0;
+}
+.sidebar-row-value {
+  color: #888;
+  text-align: right;
+}
 
 /* Stack */
 
@@ -349,12 +379,14 @@
   border: 0.5px solid;
   text-decoration: none;
   transition: opacity 0.15s;
-  &:hover { opacity: 0.72; }
+  &:hover {
+    opacity: 0.72;
+  }
 }
 
 .sidebar-link-ghost {
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  color: #666 !important;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #666;
 }
 
 .sidebar-link-none {
@@ -384,6 +416,8 @@
     padding: 8px 16px;
     cursor: pointer;
     transition: color 0.15s;
-    &:hover { color: #aaa; }
+    &:hover {
+      color: #aaa;
+    }
   }
 }
