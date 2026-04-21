@@ -4,11 +4,11 @@
 
 .cards-section {
   border-top: 0.5px solid rgba(255, 255, 255, 0.07);
-
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media (max-width: 640px) {
     padding: 0 24px 40px;
   }
@@ -22,98 +22,100 @@
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
-}
 
-.card {
-  background: #111114;
-  border: 0.5px solid rgba(255, 255, 255, 0.07);
-  border-radius: 14px;
-  padding: 24px 20px;
-  max-width: 350px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition:
-    border-color 0.2s,
-    transform 0.15s;
+  /* ── Carte ── */
 
-  &:hover {
-    border-color: rgba(255, 255, 255, 0.16);
-    transform: translateY(-3px);
+  .card {
+    background: #111114;
+    border: 0.5px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+    padding: 24px 20px;
+    max-width: 350px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition:
+      border-color 0.2s,
+      transform 0.15s;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+      transform: translateY(-3px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #7f77dd;
+      outline-offset: 2px;
+    }
   }
 
-  &:focus-visible {
-    outline: 2px solid #7f77dd;
-    outline-offset: 2px;
+  .card-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 14px 14px 0 0;
   }
-}
 
-.card-top-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  border-radius: 14px 14px 0 0;
-}
+  .card-icon-wrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
 
-.card-icon-wrap {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
+  .card-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+  }
 
-.card-title {
-  font-size: 15px;
-  font-weight: 500;
-  color: #e0e0e0;
-  margin-bottom: 8px;
-}
+  .card-desc {
+    font-size: 12px;
+    color: #e0e0e0;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
 
-.card-desc {
-  font-size: 12px;
-  color: #555;
-  line-height: 1.65;
-  margin-bottom: 20px;
-}
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
 
-.card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
+  .card-tags {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
 
-.card-tags {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-}
+  .ctag {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #555;
+    border: 0.5px solid rgba(255, 255, 255, 0.07);
+  }
 
-.ctag {
-  font-size: 10px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.04);
-  color: #555;
-  border: 0.5px solid rgba(255, 255, 255, 0.07);
-}
+  .card-arrow {
+    font-size: 14px;
+    color: #333;
+    transition:
+      color 0.15s,
+      transform 0.15s;
+    flex-shrink: 0;
 
-.card-arrow {
-  font-size: 14px;
-  color: #333;
-  transition:
-    color 0.15s,
-    transform 0.15s;
-  flex-shrink: 0;
-
-  .card:hover & {
-    color: #888;
-    transform: translateX(3px);
+    .card:hover & {
+      color: #888;
+      transform: translateX(3px);
+    }
   }
 }
 
@@ -299,51 +301,19 @@
   }
 }
 
-.html {
-  color: #e14e1d;
-}
-.css {
-  color: #1572b6;
-}
-.js {
-  color: #f7df1e;
-}
-.php {
-  color: #777bb3;
-}
-.react {
-  color: #08d8ff;
-}
-.angular {
-  color: #d6002f;
-}
-.nest {
-  color: #e0234e;
-}
-.next {
-  color: #000;
-}
-.node {
-  color: #44883e;
-}
-.sass {
-  color: #cb6e9b;
-}
-.postgres {
-  color: #336791;
-}
-.mongo {
-  color: #4db33d;
-}
-.docker {
-  color: #2496ed;
-}
-.git {
-  color: #f05032;
-}
-.gitlab {
-  color: #fc6d26;
-}
-.figma {
-  color: #f24e1e;
-}
+.html { color: #e14e1d; }
+.css { color: #1572b6; }
+.js { color: #f7df1e; }
+.php { color: #777bb3; }
+.react { color: #08d8ff; }
+.angular { color: #d6002f; }
+.nest { color: #e0234e; }
+.next { color: #000; }
+.node { color: #44883e; }
+.sass { color: #cb6e9b; }
+.postgres { color: #336791; }
+.mongo { color: #4db33d; }
+.docker { color: #2496ed; }
+.git { color: #f05032; }
+.gitlab { color: #fc6d26; }
+.figma { color: #f24e1e; }

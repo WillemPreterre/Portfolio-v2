@@ -5,13 +5,13 @@ import "./Projects.scss";
 import { PROJECTS } from "../../data/projects.data";
 
 const STATUS_LABEL = {
-  "livré":    { label: "Livré",    cls: "status-done"    },
-  "en cours": { label: "En cours", cls: "status-wip"     },
-  "concept":  { label: "Concept",  cls: "status-concept" },
+  livré: { label: "Livré", cls: "status-done" },
+  "en cours": { label: "En cours", cls: "status-wip" },
+  concept: { label: "Concept", cls: "status-concept" },
 };
 
 function Projects() {
-  const navigate   = useNavigate();
+  const navigate = useNavigate();
   const [active, setActive] = useState("Tous");
 
   const visible =
@@ -33,15 +33,20 @@ function Projects() {
               role="button"
               tabIndex={0}
               aria-label={`Voir le projet ${p.title}`}
-              onKeyDown={(e) => e.key === "Enter" && navigate(`/projects/${p.slug}`)}
+              onKeyDown={(e) =>
+                e.key === "Enter" && navigate(`/projects/${p.slug}`)
+              }
             >
               {/* Barre accent */}
-              <div className="card-accent-bar" style={{ background: p.accent }} />
+              <div
+                className="card-accent-bar"
+                style={{ background: p.accent }}
+              />
 
               {/* Image */}
               <div className="card-image">
                 {p.logo ? (
-                  <img src={p.logo} alt={p.title} />
+                  <img className="card-logo" src={p.logo} alt={p.title} />
                 ) : (
                   <div
                     className="card-placeholder"
@@ -84,7 +89,6 @@ function Projects() {
           );
         })}
       </div>
-
     </section>
   );
 }

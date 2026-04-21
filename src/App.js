@@ -4,7 +4,6 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Navbar from "./components/NavBar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import Main from "./pages/Main/Main.js";
-import Projects from "./pages/Projects/Projects.js";
 import ProjectDetail from "./pages/Projects/ProjectDetail.js";
 
 function App() {
@@ -15,8 +14,15 @@ function App() {
       >
         <Navbar />
         <Routes>
-          <Route path="/"                  element={<main><Main /></main>} />
-          <Route path="/projects/:slug"    element={<ProjectDetail />}     />
+          <Route
+            path="/"
+            element={
+              <main>
+                <Main />
+              </main>
+            }
+          />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
         </Routes>
         <Footer />
       </GoogleReCaptchaProvider>
