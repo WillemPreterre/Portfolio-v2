@@ -75,13 +75,7 @@ export const SKILLS = [
     name: "Figma",
     sub: "Design UI/UX",
   },
-  {
-    cat: "lang",
-    Icon: FaJs,
-    cls: "js",
-    name: "JavaScript",
-    sub: "Langage web",
-  },
+
   {
     cat: "lang",
     Icon: FaPhp,

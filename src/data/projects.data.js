@@ -13,7 +13,7 @@ export const PROJECTS = [
     image: "/logo-metarom.png",
     imageDesc:
       "Plateforme de formation Métarom - Projet développé en alternance",
-    year: "2023–2024",
+    year: "2022–2023",
     status: "livré",
     logo: "/logo-metarom.png",
     accent: "#378ADD",
