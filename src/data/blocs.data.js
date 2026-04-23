@@ -1,5 +1,3 @@
-/* ── Données ── */
-
 import { FaGit, FaJs, FaNode, FaPhp, FaReact, FaSass } from "react-icons/fa";
 import {
   SiAngular,
