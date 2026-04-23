@@ -1,18 +1,20 @@
 // Variables
-$bg-color: #0D0D0F;
-$navbar-text-color: #D4CEBF;
-$text-color: #D4CEBF;
+$bg-color: #0d0d0f;
+$navbar-text-color: #d4cebf;
+$text-color: #d4cebf;
 $card-bg: #f5f5f5;
 $link-color: #4c5057;
 $border-color: #1e293b;
-$font: 'Open Sans', sans-serif;
+$font: "Open Sans", sans-serif;
 
 body {
   margin: 0;
   background: $bg-color;
   color: $text-color;
 }
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
 }
@@ -24,14 +26,14 @@ html, body, #root {
 }
 
 .main-content {
-  flex: 1; // pousse le footer en bas
+  flex: 1;
 }
 .container {
   font-family: $font;
-  background: url(../public/grain.png) repeat;
-
 }
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 // Navbar
