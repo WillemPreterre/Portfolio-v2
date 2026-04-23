@@ -7,124 +7,118 @@
 export const PROJECTS = [
   {
     slug: "metarom",
-    title: "Application de formation — Métarom",
-    description: "React · Laravel · Vidéo",
-    tagline:
-      "Plateforme interne de formation avec vidéo pour une entreprise d'arômes",
-    image: "/images/metarom.jpg",
-    year: "2022",
-    logo: "/logo-metarom.png",
+    title: "Métarom — Plateforme de formation vidéo interne",
+    description: "React · Laravel · SQL Server · Vidéo",
+    tagline: "Plateforme e-learning sur-mesure pour l'industrie des arômes",
+    image: "/logo-metarom.png",
+    imageDesc:
+      "Plateforme de formation Métarom - Projet développé en alternance",
+    year: "2023–2024",
     status: "livré",
+    logo: "/logo-metarom.png",
     accent: "#378ADD",
     links: { live: null, github: null },
     context: {
       type: "Alternance",
       company: "Métarom",
-      location: "Normandie",
+      location: "Amiens",
       duration: "1 an",
     },
-    fullDescription: `Développée en alternance chez Métarom, cette application permet aux employés
-de suivre des parcours de formation internes, enrichis de vidéos tournées et montées
-spécifiquement pour l'outil. J'ai conduit les interviews métier auprès de chaque
-service pour définir les besoins, conçu l'architecture et développé l'intégralité
-de l'application en solo.`,
+    fullDescription: `Conception et développement en autonomie complète d'une plateforme e-learning 
+interne pour Métarom (industrie des arômes) lors d'une alternance d'un an. 
+Responsable de l'ensemble du cycle projet : conception de l'architecture technique, développement full-stack 
+React/Laravel, intégration de contenus vidéo pédagogiques tournés et montés sur-mesure,
+ et formation des utilisateurs. Plateforme permettant aux employés 
+de suivre des parcours de formation personnalisés avec système de gestion des droits 
+et suivi de progression.`,
     highlights: [
-      "Recueil des besoins auprès de 5 services différents",
-      "Développement full stack solo sur 1 an",
-      "Intégration vidéo avec player custom",
-      "Gestion des droits par rôle (admin / employé)",
+      "Gestion du projet en autonomie",
+      "Conduite d'interviews métier transverses",
+      "Architecture et développement full-stack solo : frontend React + API Laravel + SQL Server",
+      "Intégration de contenus vidéo pédagogiques (tournage, montage, hébergement)",
+      "Système de gestion des rôles et permissions (admin, formateur, employé)",
+      "Suivi de progression des parcours de formation et reporting",
     ],
-    stack: ["React", "Laravel", "MySQL", "Docker"],
+    stack: ["React", "Laravel", "PHP", "SQL Server"],
     screenshots: [],
   },
-
   {
     slug: "v6protect",
-    title: "Application cybersécurité — V6Protect",
-    description: "React · NestJS · Node.js",
-    tagline: "Application multicouches sur le thème de la cybersécurité",
-    image: "/images/v6protect.jpg",
+    title: "v6Protect — Plateforme SaaS de cybersécurité",
+    description: "React · NestJS · PostgreSQL · Docker",
+    tagline:
+      "Contribution au développement d'une plateforme de sécurisation web et applications",
+    image: "/dashboard-v6.png",
+    imageDesc: "Dashboard de la plateforme V6Protect - Crédits: v6protect.fr",
     year: "2023–2025",
     status: "livré",
     logo: "/logo-v6protect.png",
     accent: "#7F77DD",
-    links: { live: "https://v6protect.com", github: null },
+    links: {
+      live: null,
+      github: null,
+    },
     context: {
       type: "Alternance",
       company: "V6Protect",
-      location: "France",
+      location: "Bordeaux",
       duration: "2 ans",
     },
-    fullDescription: `Application développée sur 2 ans en alternance, couvrant des fonctionnalités
-liées à la cybersécurité : gestion des accès, monitoring, tableaux de bord.
-Architecture multicouches avec une API NestJS et un frontend React, déployée
-avec Docker et une pipeline GitLab CI/CD.`,
+    fullDescription: `Contribution au développement et à la maintenance d'une plateforme SaaS de cybersécurité 
+existante pendant 2 ans en alternance. Travail sur des fonctionnalités critiques : 
+gestion des accès, monitoring temps réel, tableaux de bord et modules de sécurité.
+Architecture multicouches avec API REST NestJS, frontend React, base PostgreSQL, 
+orchestrée via Docker et automatisée avec GitLab CI/CD.`,
     highlights: [
-      "Architecture REST multicouches avec NestJS",
-      "Authentification JWT + gestion des rôles",
-      "Dashboard temps réel",
-      "CI/CD GitLab + déploiement Docker",
+      "Développement de fonctionnalités sur une architecture REST multicouches (NestJS)",
+      "Implémentation et maintenance de l'authentification JWT avec gestion granulaire des rôles",
+      "Contribution aux dashboards temps réel et modules de monitoring",
+      "Participation à l'amélioration de la pipeline CI/CD GitLab et déploiements Docker",
     ],
-    stack: ["React", "NestJS", "Node.js", "PostgreSQL", "Docker", "GitLab CI"],
-    screenshots: [],
-  },
-
-  {
-    slug: "fabrique-biscuits",
-    title: "Gestion interne — La Fabrique à Biscuits",
-    description: "Symfony · PHP · MySQL",
-    tagline:
-      "Application de gestion des ressources pour une PME agro-alimentaire",
-    image: "/logo-fabrique.svg",
-    year: "2021",
-    status: "livré",
-    logo: "/logo-fabrique.svg",
-    accent: "#1D9E75",
-    links: { live: null, github: null },
-    context: {
-      type: "Stage",
-      company: "La Fabrique à Biscuits",
-      location: "Le Havre",
-      duration: "2 mois",
-    },
-    fullDescription: `Stage de 2 mois durant lequel j'ai conçu et développé une application
-de gestion des ressources humaines internes avec Symfony. Première expérience
-de livraison d'un produit complet pour un client réel.`,
-    highlights: [
-      "Conception UML et modélisation BDD",
-      "Développement MVC avec Symfony",
-      "Interface d'administration complète",
+    stack: [
+      "React",
+      "NestJS",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "GitLab CI/CD",
     ],
-    stack: ["Symfony", "PHP", "MySQL", "Divi", "Bootstrap"],
-    screenshots: [],
+    screenshots: ["/dashboard-v6.png"],
   },
-
   {
     slug: "matariki",
-    title: "Plateforme digitale — MATARIKI",
-    description: "React · Python · Data & IA",
-    tagline: "Plateforme digitale orientée Data & IA",
-    image: "/images/matariki-logo.png",
+    title: "MATARIKI — Plateforme Data & IA",
+    description: "React · Python · FastAPI",
+    tagline:
+      "Contribution au développement d'une plateforme digitale Data & IA",
+    image: "/logo-matariki.png",
+    imageDesc: "Plateforme MATARIKI - Crédits: matariki.fr",
     year: "2025",
     status: "livré",
     logo: "/logo-matariki.png",
     accent: "#D85A30",
-    links: { live: "https://matariki.fr", github: null },
+    links: {
+      live: null,
+      github: null,
+    },
     context: {
       type: "CDD",
       company: "MATARIKI",
       location: "Paris",
       duration: "3 mois",
     },
-    fullDescription: `CDD de 3 mois à Paris sur une plateforme digitale mêlant React côté frontend
-et Python côté data/IA. Contribution aux projets internes et au développement
-des activités dans les domaines de la Data et de l'Intelligence Artificielle.`,
+    fullDescription: `Contribution au développement d'une plateforme digitale axée Data & Intelligence 
+Artificielle lors d'un CDD de 3 mois à Paris. Travail en équipe sur des projets internes 
+combinant frontend React moderne et pipelines de données Python. Participation au 
+développement de fonctionnalités à la création de la documentation et à l'intégration de services de traitement de données.`,
     highlights: [
-      "Développement de composants React pour la plateforme",
-      "Intégration de services Python / data pipelines",
-      "Travail en équipe sur des projets IA",
+      "Développement de composants React pour l'interface de la plateforme Data/IA",
+      "Intégration et maintenance de pipelines de données Python",
+      "Collaboration sur des projets d'Intelligence Artificielle en équipe",
+      "Participation à l'architecture frontend/backend des modules IA",
+      "Création de la documentation technique pour la globalité de la plateforme ainsi que des fonctionnalités développées",
     ],
-    stack: ["React", "Python"],
+    stack: ["React", "Python", "FastAPI"],
     screenshots: [],
   },
 ];
