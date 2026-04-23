@@ -12,7 +12,7 @@ const STATUS_LABEL = {
 
 function Projects() {
   const navigate = useNavigate();
-  const [active, setActive] = useState("Tous");
+  const [active] = useState("Tous");
 
   const visible =
     active === "Tous"
