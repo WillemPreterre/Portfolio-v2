@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import "./Projects.scss";
@@ -12,18 +12,12 @@ const STATUS_LABEL = {
 
 function Projects() {
   const navigate = useNavigate();
-  const [active] = useState("Tous");
-
-  const visible =
-    active === "Tous"
-      ? PROJECTS
-      : PROJECTS.filter((p) => p.tags.includes(active));
 
   return (
     <section className="projects" id="projects">
       {/* Grille */}
       <div className="projects-grid">
-        {visible.map((p) => {
+        {PROJECTS.map((p) => {
           const statusMeta = STATUS_LABEL[p.status] ?? STATUS_LABEL["livré"];
           return (
             <div
