@@ -1,7 +1,6 @@
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
-import Navbar from "./components/NavBar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import Main from "./pages/Main/Main.js";
 import ProjectDetail from "./pages/Projects/ProjectDetail.js";

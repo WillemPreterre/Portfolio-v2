@@ -1,5 +1,4 @@
 import AboutSection from "../About/AboutSection";
-import Blocs from "../Blocs/Blocs";
 import Contact from "../Contact/Contact";
 import Presentation from "../Presentation/Presentation";
 import Projects from "../Projects/Projects";
@@ -11,9 +10,10 @@ function Main() {
         <Presentation />
       </section>
 
-      <section id="projects">
+      <section id="about">
         <AboutSection />
       </section>
+
       <section id="projects">
         <Projects />
       </section>
