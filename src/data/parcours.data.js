@@ -19,7 +19,7 @@ export const ENTRIES = [
   {
     cat: "exp",
     type: "Alternance · 2 ans",
-    title: "Développeur full stack",
+    title: "Développeur full-stack",
     org: "V6Protect — Bordeaux",
     date: "2023 – 2025",
     desc: "Développement sur une application multicouches sur le thème de la cybersécurité. Première année en alternance à Webtech Institute, deuxième année à l'EPSI (Mastère Expert en Systèmes d'Information 2024–2025).",
@@ -28,7 +28,7 @@ export const ENTRIES = [
   {
     cat: "exp",
     type: "Alternance · 1 an",
-    title: "Développeur full stack",
+    title: "Développeur full-stack",
     org: "Métarom — Amiens",
     date: "2022 – 2023",
     desc: "Première grande expérience professionnelle dans une entreprise d'arômes. Développement d'une application de formation interne avec vidéo, montage et interfaces métier. Rencontres avec les différents services pour analyser les besoins.",
@@ -46,11 +46,11 @@ export const ENTRIES = [
   {
     cat: "form",
     type: "Formation",
-    title: "Mastère Full Stack Development",
+    title: "Mastère Full-Stack Development",
     org: "Webtech Institute",
     date: "2023 – 2024",
-    desc: "Formation orientée full stack avec une dimension cybersécurité, pour renforcer la maîtrise du code côté serveur et sécuriser les applications.",
-    tags: ["Full Stack", "Cybersécurité", "Mastère"],
+    desc: "Formation orientée full-stack avec une dimension cybersécurité, pour renforcer la maîtrise du code côté serveur et sécuriser les applications.",
+    tags: ["Full-Stack", "Cybersécurité", "Mastère"],
   },
   {
     cat: "form",

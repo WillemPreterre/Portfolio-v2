@@ -59,9 +59,9 @@ function Contact() {
 
         {/* LEFT */}
         <div className="contact-left">
-          <h1>
+          <h2>
             Comment me contacter ? <br />
-          </h1>
+          </h2>
 
           <div className="contact-info">
             <div>

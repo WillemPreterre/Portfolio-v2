@@ -100,7 +100,7 @@ function Service() {
       {/* Intro */}
       <div className="service-intro">
         <p className="service-title">
-          Développeur full stack
+          Développeur full-stack
         </p>
         <p className="service-sub">
           3 ans d'expérience dans le développement web dans des

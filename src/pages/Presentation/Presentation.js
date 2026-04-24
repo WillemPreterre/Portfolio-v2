@@ -8,15 +8,15 @@ function Presentation({ onOpenParcours }) {
         <div className="hero-eyebrow">
           <span className="hero-dot" />
           <span className="hero-status">
-            Disponible — Développeur full stack
+            Disponible — Développeur full-stack
           </span>
         </div>
 
-        <h1 className="hero-name">Willem Préterre.</h1>
-        <h1 className="hero-role">
-          Développeur <span className="hero-accent">full stack</span>.
+        <h1 className="hero-name">Willem Préterre.
+          <div className="hero-role">
+            Développeur <span className="hero-accent">full-stack</span>.
+          </div>
         </h1>
-
         <p className="hero-desc">
           3 ans d'expérience dans des contextes variés —{" "}
           <strong>industrie, cybersécurité, Data &amp; IA</strong>. Je conçois
