@@ -12,7 +12,6 @@ function App() {
       <GoogleReCaptchaProvider
         reCaptchaKey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
       >
-        <Navbar />
         <Routes>
           <Route
             path="/"

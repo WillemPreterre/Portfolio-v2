@@ -15,12 +15,11 @@
 }
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 12px;
-
+ flex-direction: column;
   @media (max-width: 700px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
   /* ── Carte ── */

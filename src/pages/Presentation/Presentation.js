@@ -26,9 +26,9 @@ function Presentation({ onOpenParcours }) {
         </p>
 
         <div className="hero-actions">
-          <a href="#projects" className="btn-link">
+          <a href="/Willem_Preterre_CV.pdf" className="btn-link" download>
             <button className="btn-primary" onClick={onOpenParcours}>
-              Voir mon parcours →
+              Télécharger mon CV →
             </button>
           </a>
         </div>
@@ -39,8 +39,8 @@ function Presentation({ onOpenParcours }) {
             <span className="meta-lbl">ans d'expérience</span>
           </div>
           <div className="meta-item">
-            <span className="meta-num">4</span>
-            <span className="meta-lbl">projets livrés</span>
+            <span className="meta-num">3</span>
+            <span className="meta-lbl">projets contribués</span>
           </div>
           <div className="meta-item">
             <span className="meta-num">1</span>

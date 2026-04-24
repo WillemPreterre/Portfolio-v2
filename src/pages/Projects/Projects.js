@@ -15,6 +15,10 @@ function Projects() {
 
   return (
     <section className="projects" id="projects">
+      <h2 className="projects-title">Portfolio</h2>
+      <div className="projects-description">
+        Explorer mon portfolio en tant que full-stack développeur, avec des projets variés dans l'industrie, la cybersécurité et la Data & IA.
+      </div>
       {/* Grille */}
       <div className="projects-grid">
         {PROJECTS.map((p) => {

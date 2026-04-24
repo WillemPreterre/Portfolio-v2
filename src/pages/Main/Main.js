@@ -1,3 +1,4 @@
+import AboutSection from "../About/AboutSection";
 import Blocs from "../Blocs/Blocs";
 import Contact from "../Contact/Contact";
 import Presentation from "../Presentation/Presentation";
@@ -11,11 +12,10 @@ function Main() {
       </section>
 
       <section id="projects">
-        <Projects />
+        <AboutSection />
       </section>
-
-      <section id="about">
-        <Blocs />
+      <section id="projects">
+        <Projects />
       </section>
 
       <section id="contact">

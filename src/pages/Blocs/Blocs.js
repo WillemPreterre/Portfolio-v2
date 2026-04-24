@@ -44,7 +44,6 @@ function Blocs() {
   return (
     <>
       {/* ── Cartes navigation ── */}
-      <section className="cards-section">
         <div className="cards-grid">
           {CARDS.map(
             ({
@@ -97,7 +96,6 @@ function Blocs() {
             ),
           )}
         </div>
-      </section>
 
       {/* ════ MODALES ════ */}
       {activeModal && (
