@@ -6,7 +6,7 @@ import Blocs from '../Blocs/Blocs';
 export default function AboutSection() {
     return (
         <section className="about-section">
-            <div>
+            <div className="about-text-container">
                 <h2 className="about-label">À propos</h2>
 
                 <div className="about-text">

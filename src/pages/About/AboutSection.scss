@@ -4,6 +4,16 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
+
+            .about-text-container {
+                @media (max-width: 640px) {
+                    margin-bottom: 2rem;
+                }
+            }
+            @media (max-width: 640px) {
+                flex-direction: column;
+                padding: 10px ;
+            }
             .techno-label {
                 margin-bottom: 1.5rem;
             }
