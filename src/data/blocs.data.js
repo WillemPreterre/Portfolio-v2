@@ -1,4 +1,4 @@
-import { FaGit, FaNode, FaPhp, FaReact, FaSass } from "react-icons/fa";
+import { FaGit, FaJs, FaNode, FaPhp, FaReact, FaSass } from "react-icons/fa";
 import {
   SiAngular,
   SiDocker,
@@ -79,7 +79,14 @@ export const SKILLS = [
     Icon: FaPhp,
     cls: "php",
     name: "PHP",
-    sub: "Backend scripting",
+    sub: "Backend",
+  },
+  {
+    cat: "lang",
+    Icon: FaJs,
+    cls: "js",
+    name: "JavaScript",
+    sub: "Frontend / backend",
   },
 ];
 

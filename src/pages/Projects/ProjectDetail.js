@@ -2,17 +2,22 @@ import { useNavigate, useParams } from "react-router-dom";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { PROJECTS } from "../../data/projects.data";
 import "./ProjectDetail.scss";
+import { useEffect } from "react";
 
 const STATUS_LABEL = {
-  "livré":    { label: "Livré",    cls: "status-done"    },
-  "en cours": { label: "En cours", cls: "status-wip"     },
-  "concept":  { label: "Concept",  cls: "status-concept" },
+  livré: { label: "Livré", cls: "status-done" },
+  "en cours": { label: "En cours", cls: "status-wip" },
+  concept: { label: "Concept", cls: "status-concept" },
 };
 
 function ProjectDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const project  = PROJECTS.find((p) => p.slug === slug);
+  const project = PROJECTS.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]); // [slug] pour aussi scroller en haut lors du prev/next
 
   if (!project) {
     return (
@@ -24,9 +29,18 @@ function ProjectDetail() {
   }
 
   const {
-    title, tagline, year, status, accent,
-    image, fullDescription, highlights, stack,
-    links, context, screenshots,
+    title,
+    tagline,
+    year,
+    status,
+    accent,
+    image,
+    fullDescription,
+    highlights,
+    stack,
+    links,
+    context,
+    screenshots,
   } = project;
 
   const statusMeta = STATUS_LABEL[status] ?? STATUS_LABEL["livré"];
@@ -37,7 +51,6 @@ function ProjectDetail() {
 
   return (
     <div className="detail-page">
-
       {/* ── Nav ── */}
       <div className="detail-nav">
         <button className="back-btn" onClick={() => navigate("/")}>
@@ -51,10 +64,8 @@ function ProjectDetail() {
       </div>
 
       <div className="detail-layout">
-
         {/* ════ CONTENU PRINCIPAL ════ */}
         <div className="detail-main">
-
           {/* Header */}
           <div className="detail-header">
             <div className="detail-header-meta">
@@ -97,7 +108,10 @@ function ProjectDetail() {
               <ul className="detail-highlights">
                 {highlights.map((h, i) => (
                   <li key={i} className="highlight-item">
-                    <span className="highlight-dot" style={{ background: accent }} />
+                    <span
+                      className="highlight-dot"
+                      style={{ background: accent }}
+                    />
                     {h}
                   </li>
                 ))}
@@ -128,7 +142,9 @@ function ProjectDetail() {
                   <span className="nav-dir">← Précédent</span>
                   <span className="nav-name">{prev.title}</span>
                 </button>
-              ) : <div />}
+              ) : (
+                <div />
+              )}
               {next && (
                 <button
                   className="project-nav-btn project-nav-btn--right"
@@ -140,29 +156,29 @@ function ProjectDetail() {
               )}
             </div>
           )}
-
         </div>
 
         {/* ════ SIDEBAR ════ */}
         <aside className="detail-sidebar">
-
           {/* Contexte */}
           {context && (
             <div className="sidebar-card">
               <h3 className="sidebar-title">Contexte</h3>
               <div className="sidebar-rows">
                 {[
-                  ["Type",       context.type    ],
-                  ["Entreprise", context.company ],
-                  ["Lieu",       context.location],
-                  ["Durée",      context.duration],
-                  ["Année",      year            ],
-                ].filter(([, v]) => v).map(([label, value]) => (
-                  <div key={label} className="sidebar-row">
-                    <span className="sidebar-row-label">{label}</span>
-                    <span className="sidebar-row-value">{value}</span>
-                  </div>
-                ))}
+                  ["Type", context.type],
+                  ["Entreprise", context.company],
+                  ["Lieu", context.location],
+                  ["Durée", context.duration],
+                  ["Année", year],
+                ]
+                  .filter(([, v]) => v)
+                  .map(([label, value]) => (
+                    <div key={label} className="sidebar-row">
+                      <span className="sidebar-row-label">{label}</span>
+                      <span className="sidebar-row-value">{value}</span>
+                    </div>
+                  ))}
               </div>
             </div>
           )}
@@ -173,7 +189,9 @@ function ProjectDetail() {
               <h3 className="sidebar-title">Stack technique</h3>
               <div className="sidebar-stack">
                 {stack.map((t) => (
-                  <span key={t} className="stack-tag">{t}</span>
+                  <span key={t} className="stack-tag">
+                    {t}
+                  </span>
                 ))}
               </div>
             </div>
@@ -210,9 +228,7 @@ function ProjectDetail() {
               )}
             </div>
           </div>
-
         </aside>
-
       </div>
     </div>
   );

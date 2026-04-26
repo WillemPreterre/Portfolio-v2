@@ -12,7 +12,8 @@ function Presentation({ onOpenParcours }) {
           </span>
         </div>
 
-        <h1 className="hero-name">Willem Préterre.
+        <h1 className="hero-name">
+          Willem Préterre.
           <div className="hero-role">
             Développeur <span className="hero-accent">full-stack</span>.
           </div>
@@ -20,9 +21,10 @@ function Presentation({ onOpenParcours }) {
         <p className="hero-desc">
           3 ans d'expérience dans des contextes variés —{" "}
           <strong>industrie, cybersécurité, Data &amp; IA</strong>. Je conçois
-          des applications web robustes, de l'architecture backend à l'interface
-          utilisateur, avec une attention particulière à la qualité du code et à
-          l'expérience produit.
+          des <strong>applications web</strong>, de{" "}
+          <strong>l'architecture backend</strong> à{" "}
+          <strong>l'interface utilisateur</strong>, avec une attention à la
+          qualité du code et à l'expérience produit.
         </p>
 
         <div className="hero-actions">

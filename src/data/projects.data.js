@@ -121,4 +121,39 @@ développement de fonctionnalités à la création de la documentation et à l'i
     stack: ["React", "Python", "FastAPI"],
     screenshots: [],
   },
+
+  {
+    slug: "sport-tracker",
+    title: "Forge — Application de suivi sportif",
+    description: "React Native · Expo · Spring Boot",
+    tagline:
+      "Application mobile de suivi d'entraînements et de statistiques sportives",
+    image: "/forge-wordmark.png",
+    imageDesc: "Forge - Application mobile de suivi sportif",
+    year: "2026",
+    status: "en cours",
+    logo: "/forge-wordmark.png",
+    accent: "#1D9E75",
+    links: { live: null, github: null },
+    context: {
+      type: "Projet personnel",
+      company: null,
+      location: "Bordeaux",
+      duration: "En cours",
+    },
+    fullDescription: `Développement d'une application mobile de suivi sportif et de statistiques personnelles. 
+Projet personnel mené en dehors de tout contexte professionnel, dans une démarche d'apprentissage 
+de nouvelles technologies : React Native / Expo côté mobile et Spring Boot côté backend. 
+L'application permettra de logger des séances, suivre sa progression dans le temps et visualiser 
+ses statistiques d'entraînement. Publication prévue sur l'App Store et le Play Store à l'issue du développement.`,
+    highlights: [
+      "Apprentissage de React Native et Expo en autonomie",
+      "Développement d'une API REST avec Spring Boot (Java) — nouvelle techno",
+      "Suivi et historique des séances d'entraînement",
+      "Visualisation des statistiques et progression dans le temps",
+      "Publication prévue sur App Store et Google Play Store",
+    ],
+    stack: ["React Native", "Expo", "Spring Boot", "Java"],
+    screenshots: ["/sport-chrono.png", "/sport-main.png", "/sport-profile.png"],
+  },
 ];
