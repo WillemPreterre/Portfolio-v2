@@ -31,7 +31,7 @@ export default function AboutSection() {
             avec les utilisateurs.
           </p>
           <p>
-            Je recherche un <strong>CDI</strong>{" "} où je peux m'impliquer sur le
+            Je recherche une <strong>mission,</strong>{" "} où je peux m'impliquer sur le
             long terme, contribuer à des produits qui ont du sens, et continuer
             à progresser techniquement.
           </p>
