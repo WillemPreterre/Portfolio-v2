@@ -52,7 +52,7 @@ et suivi de progression.`,
     imageDesc: "Dashboard de la plateforme V6Protect - Crédits: v6protect.fr",
     year: "2023–2025",
     status: "livré",
-    logo: "/logo-v6protect.png",
+    logo: "/logo-protect.png",
     accent: "#7F77DD",
     links: {
       live: null,
