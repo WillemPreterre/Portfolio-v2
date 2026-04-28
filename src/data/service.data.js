@@ -96,7 +96,7 @@ export const SOFT_SKILLS = [
       </>
     ),
     title: "Bonne ambiance",
-    desc: "J'aime bosser sérieusement sans se prendre au sérieux. Une bonne dynamique d'équipe, c'est aussi important que la stack.",
+    desc: " J'apprends vite et j'aime ça. Je suis à l'aise dans les environnements collaboratifs et j'aime apprendre aupres des autres.",
     tags: ["Esprit d'équipe", "Humour", "Entraide"],
   },
   {
@@ -123,7 +123,7 @@ export const SOFT_SKILLS = [
       </>
     ),
     title: "Adaptabilité",
-    desc: "Passé de Laravel à NestJS à FastAPI selon les contextes, jamais bloqué par une techno. J'apprends vite et j'aime ça.",
+    desc: "Passé de Laravel à NestJS selon les contextes, une nouvelle techno ne m'a jamais bloqué.",
     tags: ["Polyvalence", "Curiosité", "Apprentissage"],
   },
 ];

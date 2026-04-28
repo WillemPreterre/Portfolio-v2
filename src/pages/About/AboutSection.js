@@ -11,27 +11,27 @@ export default function AboutSection() {
 
         <div className="about-text">
           <p>
-            <strong>Développeur full-stack</strong> basé à Bordeaux, spécialisé
-            en <strong>React</strong>, <strong>NestJS</strong>
+            <strong>Développeur full-stack</strong>{" "} basé à Bordeaux, spécialisé
+            en <strong>React</strong>, <strong>NestJS</strong>{" "}
             et <strong>Node.js</strong>, avec <strong>3 ans</strong>{" "}
             d'expérience sur des applications web orientées cybersécurité, data
             et IA.
           </p>
           <p>
             <strong>Polyvalent et curieux</strong>, j'aime apprendre en continu
-            et m'investir dans <strong>des projets multicouches</strong> — de{" "}
-            <strong>l'architecture backend</strong> à
+            et m'investir dans <strong>des projets multicouches</strong>{" "} — de{" "}
+            <strong>l'architecture backend</strong>{" "} à{" "}
             <strong>l'interface utilisateur</strong>. J'attache autant
             d'importance à la qualité du code qu'à l'expérience produit finale.
           </p>
           <p>
             Tourné vers les autres,{" "}
-            <strong>je aime échanger, collaborer et construire</strong>
+            <strong>j'aime échanger, collaborer et construire</strong>{" "}
             avec les gens autour de moi — que ce soit en équipe ou directement
             avec les utilisateurs.
           </p>
           <p>
-            Je recherche un <strong>CDI</strong> où je peux m'impliquer sur le
+            Je recherche un <strong>CDI</strong>{" "} où je peux m'impliquer sur le
             long terme, contribuer à des produits qui ont du sens, et continuer
             à progresser techniquement.
           </p>
