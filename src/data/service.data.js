@@ -109,7 +109,7 @@ export const SOFT_SKILLS = [
       </>
     ),
     title: "Communication",
-    desc: "À l'aise pour vulgariser des sujets techniques auprès de non-devs. J'ai l'habitude d'aller au contact des métiers pour comprendre les vrais besoins.",
+    desc: "J'aime comprendre le besoin derrière le code — échanger avec les métiers pour construire quelque chose qui a vraiment du sens.",
     tags: ["Vulgarisation", "Écoute", "Recueil besoins"],
   },
   {
