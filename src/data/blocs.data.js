@@ -8,6 +8,7 @@ import {
   SiNestjs,
   SiNextdotjs,
   SiPostgresql,
+  SiSpringboot,
 } from "react-icons/si";
 
 export const CATEGORIES = [
@@ -34,6 +35,14 @@ export const SKILLS = [
     name: "Angular",
     sub: "Frontend fw",
   },
+  {
+    cat: "fw",
+    Icon: SiSpringboot,
+    cls: "spring",
+    name: "Spring Boot",
+    sub: "API Java",
+  },
+
   {
     cat: "fw",
     Icon: FaNode,
