@@ -106,7 +106,7 @@ export const CARDS = [
     iconStroke: "#378ADD",
     iconBg: "rgba(55,138,221,0.12)",
     iconPath: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />,
-    title: "Mon apport",
+    title: "Mes apports",
     desc: "Ce que j'apporte concrètement — frontend, backend, DevOps, conduite de projet.",
     tags: ["React", "NestJS", "Docker"],
   },
@@ -121,7 +121,7 @@ export const CARDS = [
         <polyline points="8 6 2 12 8 18" />
       </>
     ),
-    title: "Skills",
+    title: "Compétences technologiques",
     desc: "Stack technique complète — frameworks, bases de données, DevOps et langages.",
     tags: ["16 technos", "4 catégories"],
   },
@@ -143,7 +143,7 @@ export const CARDS = [
 ];
 
 export const MODAL_TITLES = {
-  apport: "Mon apport",
+  apport: "Mes apports",
   skills: "Stack technique",
   parcours: "Parcours",
 };

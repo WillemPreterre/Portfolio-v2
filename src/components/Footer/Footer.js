@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="footer-content">
                 </div>
              <div className="footer-bottom">
-                &copy; {new Date().getFullYear()} - All rights reserved Willem, web and application developer - Willem Préterre.
+                &copy; {new Date().getFullYear()} Copyright Willem Préterre
              </div>
         </footer>
     );

@@ -95,9 +95,9 @@ export const SOFT_SKILLS = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </>
     ),
-    title: "Bonne ambiance",
-    desc: " J'apprends vite et j'aime ça. Je suis à l'aise dans les environnements collaboratifs et j'aime apprendre aupres des autres.",
-    tags: ["Esprit d'équipe", "Humour", "Entraide"],
+    title: "Collaboration",
+    desc: "J'apprécie le travail en équipe dans le cadre de projets collaboratifs. j'aime le partage d'expérience et apprendre avec les autres.",
+    tags: ["Esprit d'équipe", "Entraide"],
   },
   {
     accent: "#7F77DD",

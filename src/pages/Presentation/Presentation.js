@@ -5,13 +5,6 @@ function Presentation({ onOpenParcours }) {
   return (
     <section className="hero">
       <div className="hero-inner">
-        <div className="hero-eyebrow">
-          <span className="hero-dot" />
-          <span className="hero-status">
-            Disponible — Développeur full-stack
-          </span>
-        </div>
-
         <h1 className="hero-name">
           Willem Préterre.
           <div className="hero-role">
@@ -20,8 +13,8 @@ function Presentation({ onOpenParcours }) {
         </h1>
         <p className="hero-desc">
           3 ans d'expérience dans des contextes variés —{" "}
-          <strong>industrie, cybersécurité, Data &amp; IA</strong>. Je conçois
-          des <strong>applications web</strong>, de{" "}
+          <strong>industrie, cybersécurité, data &amp; IA</strong>. Je conçois
+          des <strong>applications</strong>, de{" "}
           <strong>l'architecture backend</strong> à{" "}
           <strong>l'interface utilisateur</strong>, avec une attention à la
           qualité du code et à l'expérience produit.
@@ -41,12 +34,12 @@ function Presentation({ onOpenParcours }) {
             <span className="meta-lbl">ans d'expérience</span>
           </div>
           <div className="meta-item">
-            <span className="meta-num">3</span>
+            <span className="meta-num">4</span>
             <span className="meta-lbl">projets contribués</span>
           </div>
           <div className="meta-item">
             <span className="meta-num">1</span>
-            <span className="meta-lbl">mastère obtenu</span>
+            <span className="meta-lbl">mastère informatique</span>
           </div>
           <div className="meta-item">
             <span className="meta-num">React · Node · NestJS</span>

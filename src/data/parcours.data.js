@@ -12,7 +12,7 @@ export const ENTRIES = [
     title: "Développeur de plateforme digitale",
     org: "MATARIKI — Paris",
     date: "2025",
-    desc: "Travail sur une plateforme digitale en React et Python. Contribution aux projets internes et au développement des activités dans les domaines Data & IA.",
+    desc: "Travail sur une plateforme digitale en React et Python. Contribution aux projets internes et au développement des activités dans les domaines data & IA.",
     tags: ["React", "Python", "Data & IA"],
     current: true,
   },

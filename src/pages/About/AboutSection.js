@@ -14,7 +14,7 @@ export default function AboutSection() {
             <strong>Développeur full-stack</strong>{" "} basé à Bordeaux, spécialisé
             en <strong>React</strong>, <strong>NestJS</strong>{" "}
             et <strong>Node.js</strong>, avec <strong>3 ans</strong>{" "}
-            d'expérience sur des applications web orientées cybersécurité, data
+            d'expérience sur des applications orientées cybersécurité, data
             et IA.
           </p>
           <p>
@@ -26,14 +26,10 @@ export default function AboutSection() {
           </p>
           <p>
             Tourné vers les autres,{" "}
-            <strong>j'aime échanger, collaborer et construire</strong>{" "}
-            avec les gens autour de moi — que ce soit en équipe ou directement
-            avec les utilisateurs.
+            <strong>j'aime échanger, collaborer et construire au sein de l'équipe de développement et avec les utilisateurs</strong>
           </p>
           <p>
-            Je recherche une <strong>mission,</strong>{" "} où je peux m'impliquer sur le
-            long terme, contribuer à des produits qui ont du sens, et continuer
-            à progresser techniquement.
+            J'apprécie les <strong>missions</strong> sur lesquelles je peux contribuer à des projets qui ont du sens et à des solutions technologiques innovantes.
           </p>
         </div>
         <hr className="about-divider" />
